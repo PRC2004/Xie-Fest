@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Style.css">
+    <title>Account Info</title>
+</head>
+<body>
+    
+    <br>
+    <br>
+
+    <section class="top-banner flex">
+        <div class="container">
+            <div class="font2 announcement">
+                Account Details
+            </div>
+        </div>
+    </section>
+
+    <br>
+    <br>
+
+    <hr>
+
+    <br>
+    <br>
+    
+    <section>
+        <div class="infosection container flexnew">
+            <div class="accounticon">
+                <img src="./Assets/useraccountbig.png" alt="">
+            </div>
+            <div class="accountdetails">
+                <p class="font6" id="Name">Harshvardhan Gupta</p>
+                <p class="font6" id="Gender">Male</p>
+                <p class="font6" id="Code">0690</p>
+                <p class="font6" id="Contact">+91 8451937289</p>
+                <p class="font6" id="Email">hvsg110403@gmail.com</p>
+            </div>
+        </div>
+    </section>
+
+    <br>
+    <br>
+
+    <hr>
+
+    <br>
+
+    <!-- <section class="top-banner flex">
+        <div class="container">
+            <div class="font7 announcement">
+                Partcipation Details
+            </div>
+        </div>
+    </section>
+
+    <br>
+
+    <hr> -->
+
+    <br>
+
+
+</body>
+<script src="SimplePrevent.js"></script>
+<script>
+    function UserDetails() {
+        var Details = JSON.parse(localStorage.getItem('Account'));
+        document.getElementById('Name').innerHTML = Details.Name;
+        document.getElementById('Gender').innerHTML = Details.Gender;
+        document.getElementById('Code').innerHTML = Details.Code;
+        document.getElementById('Contact').innerHTML = Details.ContactNo;
+        document.getElementById('Email').innerHTML = Details.Email;
+    }
+
+    window.onload = UserDetails;
+</script>
+</html>

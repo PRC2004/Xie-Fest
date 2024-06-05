@@ -1,0 +1,356 @@
+/* Defaults */
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+    scroll-behavior: smooth;
+}
+
+body{
+    background-color: black;
+    animation: anime 2s;
+}
+
+:root{
+    --primary-text-color: ;
+    --secondary-text-color: ;
+    --primary-accent-color: ;
+    --secondary-accent-color: ;
+    --section-inline-padding: 20px;
+}
+
+.font1{
+    font-family: 'Poppins', serif;
+    font-size: 24px;
+    font-weight: 200;
+    color: white;
+}
+
+.font2{
+    font-family: 'Poppins', serif;
+    font-size: 50px;
+    font-weight: 700;
+    color: white;
+}
+
+.font3{
+    font-family: 'Poppins', serif;
+    font-size: 200px;
+    font-weight: 700;
+    color: white;
+}
+
+.font4{
+    font-family: 'Poppins', serif;
+    font-size: 20px;
+    font-weight: 100;
+    color: white;
+}
+
+.font5{
+    font-family: 'Poppins', serif;
+    font-size: 15px;
+    font-weight: 100;
+    color: black;
+    width:350px;
+    height: 40px;
+    border: none;
+    border-radius: 5px;
+    margin-top: 5px;
+    padding-left: 5px;
+}
+
+.font6{
+    font-family: 'Poppins', serif;
+    font-size: 40px;
+    font-weight: 500;
+    color: white;
+    padding-left: 50px;
+    padding-bottom: 5px;
+}
+
+.font7{
+    font-family: 'Poppins', serif;
+    font-size: 40px;
+    font-weight: 300;
+    color: white;
+}
+
+.flex{
+    display: flex;
+    align-items: center;
+    align-self: center;
+    align-content: center;
+}
+
+.flexnew{
+    display: flex;
+    align-items: center;
+    align-self: center;
+    align-content: center;
+    justify-content: center;
+}
+
+.flexd{
+    display: flex;
+}
+
+.flex-end{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+flex-start{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+li{
+    list-style: none;
+    font-size: 18px;
+    padding: 20px;
+    color: black;
+}
+
+a{
+    text-decoration: none;
+    color: whitesmoke;
+}
+
+.justified-alignment{
+    text-align: justify;
+}
+
+.container{
+    width: 80%;
+    margin-inline: auto;
+    padding-inline: var(--section-inline-padding);
+}
+
+.margin{
+    height: 75px;
+}
+
+.center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+
+/* Landing Page */
+
+.top-banner{
+    height: 50px;
+    /* background-image: url(./assets/banner-bg.png); */
+    background-color: black;
+    background-size: 250px;
+}
+
+.announcement{
+    text-align: center;
+    padding: 15px 30px;
+    color: white;
+}
+
+.main-nav{
+    justify-content: space-between;
+}
+
+.other-links{
+    display: flex;
+}
+
+.navbar{
+    /* background-color: red; */
+    height: 140px;
+}
+
+.navbarMain{
+    height: 200px;
+}
+
+.company-logo{
+    height: 100px;
+}
+
+.primary-button{
+    border-radius: 6px;
+    border: 2px white solid;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    color: white;
+    font-weight: 1000;
+    background-color: black;
+    padding: 15px 30px;
+    box-shadow: 0 0 2px black;
+    transition: 0.2s ease-out;
+}
+.primary-button:hover{
+    background-color: grey;
+}
+
+.secondary-button{
+    height: 165px;
+    width: 100%;
+    border-radius: 6px;
+    border: 2px white solid;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    font-weight: 1000;
+    color: white;
+    background-color: black;
+    padding: 15px 30px;
+    box-shadow: 0 0 2px black;
+    transition: 0.2s ease-out;
+    cursor: pointer;
+}
+
+.spandanButton{
+   font-size: 65px;
+   font-family: Georgia, 'Times New Roman', Times, serif
+}
+.spandanButton:hover{
+    background-color: rgba(255, 0, 0, 0.250);
+    transition: 0.25s ease-out;
+}
+.transmissionButton{
+    font-size: 65px;
+    font-family: Georgia, 'Times New Roman', Times, serif
+}
+.transmissionButton:hover{
+    background-color: rgba(0, 0, 255, 0.250);
+    transition: 0.25s ease-out;
+}
+.sparxButton{
+    font-size: 65px;
+    font-family: Georgia, 'Times New Roman', Times, serif
+}
+.sparxButton:hover{
+    background-color: rgba(0, 128, 0, 0.250);
+    transition: 0.25s ease-out;
+}
+.semworkButton{
+    font-size: 65px;
+    font-family: Georgia, 'Times New Roman', Times, serif
+}
+.semworkButton:hover{
+    background-color: rgba(255, 255, 0, 0.250);
+    transition: 0.25s ease-out;
+}
+
+.contactus{
+    /* background-image: url(./assets/banner-bg.png); */
+    background-color: black;
+    background-size: 250px;
+}
+
+.contactmain{
+    height: 400px;
+    /* background-image: url(./assets/banner-bg.png); */
+    background-size: 250px;
+}
+
+.whitefont{
+    color: #ffffff;
+}
+
+.signinlogo{
+    margin-left: 100px;
+    margin-bottom: 25px;
+}
+
+.backbutton{
+    width: 175px;
+}
+
+.submit{
+    width: 175px;
+}
+
+.blackbg{
+    background-color: black;
+    color: white;
+    border: 2px white solid;
+}
+
+option{
+    width: 355px;
+}
+
+.signinouter{
+    border: 2px white solid;
+    border-radius: 10px;
+    padding: 50px;
+}
+
+.signupouter{
+    border: 2px white solid;
+    border-radius: 10px;
+    padding: 50px;
+}
+
+@keyframes anime {
+    from{
+        opacity:0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+.useraccountimg{
+    padding: 0px;
+    list-style-type: none;
+}
+ 
+.spandanpagelink:hover{
+    color: rgb(182, 51, 73);
+}
+
+.transmissionpagelink:hover{
+    color: skyblue;
+}
+
+.sparxpagelink:hover{
+    color: rgba(0, 255, 0, 0.5);
+}
+
+/* .underline{
+    text-decoration: underline;
+} */
+
+.eventlist{
+    width: 100%;
+    height: 250px;
+    border: 3px white solid;
+    border-radius: 5px;
+}
+
+.event-title{
+    padding-top: 15px;
+    padding-bottom: 10px;
+}
+
+.eventfee{
+    padding-right: 50px;
+}
+
+.eventtype{
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.eventprize{
+    padding-left: 50px;
+}
+

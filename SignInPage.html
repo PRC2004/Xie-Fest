@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Style.css">
+    <link rel="import" href="SignUpPage.html">
+    <title>Sign In</title>
+</head>
+<body>
+    
+   <section class="signin container flex">
+    <div class="signinouter center">
+        <div class="signinlogo">
+            <img src="./Assets/signinlogo.png" alt="signinlogo">
+        </div>
+        <div class="signindata">
+            <form class="" action="">
+                <div class="name">
+                    <label for="name" class="font4">Name</label>
+                    <br>
+                    <input type="text" id='name' name="name" placeholder="Enter your Full Name" class="font5 blackbg">
+                </div>         
+                
+                <br>
+
+                <div class="contactno">
+                    <label for="contactno" class="font4">Contact Number</label>
+                    <br>
+                    <input type="number" id='contactno' name="contactno" placeholder="Enter your Contact Number (!0 Digits)" class="font5 blackbg" 
+                    oninput="javascript: if (this.value.length > '10') this.value = this.value.slice(0,10)">
+                </div>
+
+                <br>
+      
+                <div class="emailaddress">
+                    <label for="emailaddress" class="font4">Email Address</label>
+                    <br>
+                    <input type="email" id='emailaddress' name="emailaddress" placeholder="Enter your Email Address" class="font5 blackbg">
+                </div>
+                
+                <br>
+
+                <div class="password">
+                    <label for="password" class="font4">Password</label>
+                    <br>
+                    <input type="password" id='password' name="password" placeholder="Enter your Password (8-12 Characters)" class="font5 blackbg" minlength="8" maxlength="12">
+                </div>
+
+                <br>
+
+                
+                <div class="buttons flex">
+                    <div class="backbutton flex-start">
+                        <a href="./LandingPage.html">
+                            <button type="button" class="font1 primary-button">Back</button>
+                        </a>
+                    </div>
+                    <div class="submit flex-end">
+                        <a href="">
+                            <button type="submit" id='SignIn' class="font1 primary-button" onclick="true">Submit</button>
+                        </a>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+   </section>
+   
+</body>
+<script>
+    /*
+    function Validate(input,Password,Contact) {
+        var Gmail = '@gmail.com';
+        var Xstudent = '@student.xavier.ac.in';
+        if ( Password.length > 5 && Password.length < 13 && input.match(Gmail) && Contact.length == 10 || Password.length > 5 && Password.length < 13 && input.match(Xstudent) && Contact.length == 10) {
+                return true;
+            }
+        else {
+            if (Contact.length != 10) {
+                alert('Your Contact Number is Invalid');
+            }
+            else if (input.match(Gmail) == null && input.match(Xstudent) == null) {
+                alert('Invalid Email Address');
+            }
+            else if (Password.length < 5 || Password.length > 13) {
+                alert('Password Length should be between 5 and 13; Password Count : ' +Password.length)
+            }
+            console.log(input +' ' +Password);
+            return false;
+        }
+    }
+    */
+
+    SignIn = document.getElementById('SignIn');
+    SignIn.addEventListener('click',function(e) {
+        e.preventDefault();
+        const Name = document.getElementById('name').value;const Number = document.getElementById('contactno').value;
+        const Email = document.getElementById('emailaddress').value;const Password = document.getElementById('password').value;
+        if (Name,Number,Email,Password == "" ) {
+            alert('Field Empty...')
+        }
+        else {
+            fetch('/SignIn', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({Name,Number,Email,Password})
+            })
+            .then(response => response.json())
+            .then(data => {
+                if(data.message) {
+                    alert(data.message)
+                }
+                window.location.href = data.redirect;
+                localStorage.setItem('Account', JSON.stringify(data.Account));
+            })
+        }
+    });
+    
+</script>
+<script src="SimplePrevent.js"></script>
+</html>
