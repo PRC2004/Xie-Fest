@@ -12,7 +12,7 @@ Client.connect();
 const database = Client.db('MP5');
 
 app.get('/', (req,res) => {
-    res.sendFile(__dirname +'/LandingPage.html');
+    res.sendFile(__dirname +'/index.html');
 })
 
 app.post('/SignUp', async (req,res) => {
